@@ -20,3 +20,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.container {
+  width: 100%; /* Default width */
+  max-width: 960px; /* Maximum width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 720px; /* Adjusted width for smaller screens */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    max-width: 540px; /* Adjusted width for even smaller screens */
+  }
+}
