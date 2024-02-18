@@ -4,6 +4,7 @@
   --color-black: #10141f;
   --color-dark-blue: #161d2f;
   --color-light-blue: #586a8e;
+  --main-border-radius: 25px;
 }
 body {
   margin: 0;
@@ -23,7 +24,7 @@ code {
 
 .container {
   width: 100%; /* Default width */
-  max-width: 960px; /* Maximum width */
+  max-width: 1400px; /* Maximum width */
   margin: 0 auto; /* Center the container horizontally */
 }
 
@@ -35,6 +36,7 @@ code {
 
 @media screen and (max-width: 576px) {
   .container {
+    width: 90%;
     max-width: 540px; /* Adjusted width for even smaller screens */
   }
 }
