@@ -1,37 +1,41 @@
 .trending {
-  .slide-container {
-    background-color: gray;
-    max-width: 1300px;
-    width: 100%;
-    .slide-content {
-      /* margin: 0 40px; */
-      .card-wrapper {
-        .card {
-          width: 320px;
-          border-radius: var(--main-border-radius);
-          -webkit-border-radius: var(--main-border-radius);
-          -moz-border-radius: var(--main-border-radius);
-          -ms-border-radius: var(--main-border-radius);
-          -o-border-radius: var(--main-border-radius);
-          background-color: aqua;
-          margin-bottom: 10px;
-          width: fit-content;
-          .card-image {
-            position: relative;
-            height: 150px;
-            width: 320px;
-            .img {
-              border-radius: var(--main-border-radius);
-              -webkit-border-radius: var(--main-border-radius);
-              -moz-border-radius: var(--main-border-radius);
-              -ms-border-radius: var(--main-border-radius);
-              -o-border-radius: var(--main-border-radius);
-              height: 100%;
-              width: 100%;
-            }
-          }
-        }
+  @media (min-width: 768) {
+    margin-right: 100px;
+    background-color: aqua;
+  }
+  .card {
+    border-radius: var(--main-border-radius);
+    -webkit-border-radius: var(--main-border-radius);
+    -moz-border-radius: var(--main-border-radius);
+    -ms-border-radius: var(--main-border-radius);
+    -o-border-radius: var(--main-border-radius);
+    margin-bottom: 10px;
+    transition: 0.9s;
+    -webkit-transition: 0.9s;
+    -moz-transition: 0.9s;
+    -ms-transition: 0.9s;
+    -o-transition: 0.9s;
+    .card-image {
+      position: relative;
+      height: 150px;
+      width: 320px;
+      .img {
+        border-radius: var(--main-border-radius);
+        -webkit-border-radius: var(--main-border-radius);
+        -moz-border-radius: var(--main-border-radius);
+        -ms-border-radius: var(--main-border-radius);
+        -o-border-radius: var(--main-border-radius);
+        height: 100%;
+        width: 100%;
       }
+    }
+    .card-content {
+      display: none;
+      transition: 0.9s;
+      -webkit-transition: 0.9s;
+      -moz-transition: 0.9s;
+      -ms-transition: 0.9s;
+      -o-transition: 0.9s;
     }
   }
 }
