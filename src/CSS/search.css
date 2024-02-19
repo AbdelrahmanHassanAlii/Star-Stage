@@ -1,9 +1,31 @@
 .search-area {
-  background-color: blue;
   width: 100%;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 576px) {
+    width: 90%;
+  }
   .search-icon {
+    font-size: 20px;
+  }
+  ::placeholder {
+    color: var(--color-gray);
   }
   .search-input {
-    width: 100%;
+    width: 90%;
+    font-size: 15px;
+    background-color: transparent;
+    padding: 10px 2px;
+    border: none;
+    outline: none;
+    color: var(--color-white);
+    @media (min-width: 576px) {
+      width: 95%;
+    }
+    @media (min-width: 768px) {
+      width: 97%;
+    }
   }
 }

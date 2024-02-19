@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="main-content">
-        <Search />
+      <div className="main-content container">
+        <Search placeHolder="Search for movies or TV series" />
         <Content />
       </div>
     </div>
