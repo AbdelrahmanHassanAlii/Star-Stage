@@ -1,5 +1,8 @@
 .trending {
   .slide-container {
+    background-color: gray;
+    max-width: 1300px;
+    width: 100%;
     .slide-content {
       /* margin: 0 40px; */
       .card-wrapper {
