@@ -3,6 +3,11 @@
     margin-right: 100px;
     background-color: aqua;
   }
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      background-color: var(--color-light-blue);
+    }
+  }
   .card {
     border-radius: var(--main-border-radius);
     -webkit-border-radius: var(--main-border-radius);
@@ -38,4 +43,8 @@
       -o-transition: 0.9s;
     }
   }
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background-color: var(--color-light-blue);
 }

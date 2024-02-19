@@ -4,7 +4,8 @@
     flex-direction: row;
   }
   .main-content {
-    width: 100%;
+    width: 92%;
     margin-top: 20px;
+    /* background-color: brown; */
   }
 }
