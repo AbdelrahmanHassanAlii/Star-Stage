@@ -12,10 +12,10 @@ export default function Header() {
             <img src={sitelogo} alt="site-logo" />
           </div>
           <div className="icons">
-            <i class="fa-brands fa-microsoft"></i>
-            <i class="fa-solid fa-film"></i>
-            <i class="fa-solid fa-tv"></i>
-            <i class="fa-solid fa-bookmark"></i>
+            <i className="fa-brands fa-microsoft"></i>
+            <i className="fa-solid fa-film"></i>
+            <i className="fa-solid fa-tv"></i>
+            <i className="fa-solid fa-bookmark"></i>
           </div>
         </div>
         <div className="user-img">
