@@ -1,0 +1,9 @@
+.search-area {
+  background-color: blue;
+  width: 100%;
+  .search-icon {
+  }
+  .search-input {
+    width: 100%;
+  }
+}
