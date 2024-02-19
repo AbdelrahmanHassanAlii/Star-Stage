@@ -1,0 +1,34 @@
+.trending {
+  .slide-container {
+    .slide-content {
+      /* margin: 0 40px; */
+      .card-wrapper {
+        .card {
+          width: 320px;
+          border-radius: var(--main-border-radius);
+          -webkit-border-radius: var(--main-border-radius);
+          -moz-border-radius: var(--main-border-radius);
+          -ms-border-radius: var(--main-border-radius);
+          -o-border-radius: var(--main-border-radius);
+          background-color: aqua;
+          margin-bottom: 10px;
+          width: fit-content;
+          .card-image {
+            position: relative;
+            height: 150px;
+            width: 320px;
+            .img {
+              border-radius: var(--main-border-radius);
+              -webkit-border-radius: var(--main-border-radius);
+              -moz-border-radius: var(--main-border-radius);
+              -ms-border-radius: var(--main-border-radius);
+              -o-border-radius: var(--main-border-radius);
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
