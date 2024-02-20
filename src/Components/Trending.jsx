@@ -6,7 +6,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../CSS/trending.css";
-
+import { myKey } from './../index'
 import {
   Keyboard,
   Scrollbar,
@@ -17,7 +17,7 @@ import {
 
 export default function Trending() {
   const [trending, setTrending] = useState(null);
-  const key = "b5bc4bad4378b1f319250c39c5fd689a";
+  const key = myKey;
   const imagePath = "https://image.tmdb.org/t/p/w500";
 
   useEffect(() => {
