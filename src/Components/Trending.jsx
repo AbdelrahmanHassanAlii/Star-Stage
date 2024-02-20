@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -6,7 +6,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "../CSS/trending.css";
-import { myKey } from './../index'
+// import { myKey } from './../index'
 import {
   Keyboard,
   Scrollbar,
@@ -14,29 +14,21 @@ import {
   Pagination,
   Autoplay,
 } from "swiper/modules";
+import { getAllTrending } from "./JS/moviesFunctions";
 
 export default function Trending() {
   const [trending, setTrending] = useState(null);
-  const key = myKey;
+  // const key = myKey;
   const imagePath = "https://image.tmdb.org/t/p/w500";
 
   useEffect(() => {
-    const fetchTrending = async () => {
-      try {
-        const response = await axios.get(
-          "https://api.themoviedb.org/3/trending/all/day",
-          {
-            params: {
-              api_key: key,
-            },
-          }
-        );
-        setTrending(response.data.results);
-      } catch (err) {
-        console.error(err);
-      }
-    };
-    fetchTrending();
+    getAllTrending()
+      .then((data) => {
+        setTrending(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching trending data:", error);
+      });
   }, []);
 
   return (
