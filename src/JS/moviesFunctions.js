@@ -19,13 +19,14 @@ export const getAllTrending = async () => {
 };
 
 //function to get top Rated movies
-export const getTopRated = async () => {
+export const getTopRatedMovies = async (pageNumber) => {
   try {
     const response = await axios.get(
       `https://api.themoviedb.org/3/movie/top_rated`,
       {
         params: {
           api_key: myKey,
+          page: pageNumber,
         },
       }
     );
