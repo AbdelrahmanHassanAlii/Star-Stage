@@ -13,7 +13,7 @@ import {
   Pagination,
   Autoplay,
 } from "swiper/modules";
-import { getAllTrending } from "./JS/moviesFunctions";
+import { getAllTrending } from "../JS/moviesFunctions";
 
 export default function Trending() {
   const [trending, setTrending] = useState(null);
