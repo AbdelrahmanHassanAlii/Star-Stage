@@ -41,7 +41,7 @@ export default function Recommended() {
         <h1>Recommended for you</h1>
         <div className="cards grid-container">
           {mixedData.map((item, index) => (
-            <Card key={index} item={item} />
+            <Card key={index} item={item} number={index} />
           ))}
         </div>
       </div>

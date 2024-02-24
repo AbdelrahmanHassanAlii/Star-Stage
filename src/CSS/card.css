@@ -1,5 +1,31 @@
 .card {
-  /* background-color: var(--color-light-blue); */
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  @media screen and (min-width: 768px) {
+    &:hover {
+      background-color: var(--color-dark-blue);
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+    }
+
+    &:hover .description {
+      display: block;
+    }
+    &:hover img {
+      border-radius: 0px;
+      -webkit-border-radius: 0px;
+      -moz-border-radius: 0px;
+      -ms-border-radius: 0px;
+      -o-border-radius: 0px;
+    }
+  }
+
   img {
     width: 100%;
     border-radius: 10px;
@@ -7,5 +33,45 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+  }
+  .card-content {
+    padding: 10px;
+  }
+  .date {
+    color: var(--color-light-blue);
+    font-size: 12px;
+    margin: 0;
+  }
+  .title {
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 2px;
+  }
+  .description {
+    font-size: 10px;
+    font-weight: bold;
+    color: var(--color-light-blue);
+    display: none;
+  }
+
+  /* Only apply transform origin to the last card in a row */
+  &:last-child {
+    @media screen and (min-width: 768px) {
+      transform-origin: right;
+      -webkit-transform-origin: right;
+      -moz-transform-origin: right;
+      -ms-transform-origin: right;
+      -o-transform-origin: right;
+    }
+  }
+}
+
+.card.last-in-row-in-large-screen {
+  @media screen and (min-width: 768px) {
+    transform-origin: right;
+    -webkit-transform-origin: right;
+    -moz-transform-origin: right;
+    -ms-transform-origin: right;
+    -o-transform-origin: right;
   }
 }
