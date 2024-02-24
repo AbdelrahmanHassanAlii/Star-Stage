@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { getTopRatedMovies } from "../JS/moviesFunctions";
 import { getTopRatedSeries } from "../JS/seriesFunction";
 import Card from "./Card";
+import "../CSS/recommended.css";
 
-export default function TopRatedMovies() {
+export default function Recommended() {
   const [pageNumber, setPageNumber] = useState(1);
   const [mixedData, setMixedData] = useState([]);
 
@@ -36,9 +37,9 @@ export default function TopRatedMovies() {
 
   return (
     <>
-      <div className="top-rated-movies">
-        <h1>Top Rated Movies</h1>
-        <div className="grid-container">
+      <div className="recommended">
+        <h1>Recommended for you</h1>
+        <div className="cards grid-container">
           {mixedData.map((item, index) => (
             <Card key={index} item={item} />
           ))}

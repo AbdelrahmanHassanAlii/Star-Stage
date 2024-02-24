@@ -24,7 +24,7 @@ code {
 
 .container {
   width: 100%; /* Default width */
-  max-width: 1400px; /* Maximum width */
+  /* max-width: 1400px; Maximum width */
   margin: 0 auto; /* Center the container horizontally */
 }
 
@@ -34,9 +34,25 @@ code {
   }
 }
 
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
   .container {
     width: 90%;
     max-width: 540px; /* Adjusted width for even smaller screens */
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  /* Media query for tablets */
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Media query for mobile screens */
+  @media (max-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

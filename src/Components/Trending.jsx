@@ -65,7 +65,7 @@ export default function Trending() {
           {trending &&
             trending.map((element) => (
               <SwiperSlide key={element.id}>
-                <div className="card">
+                <div className="card-slider">
                   <div className="card-image">
                     <img
                       src={`${imagePath}${element.backdrop_path}`}

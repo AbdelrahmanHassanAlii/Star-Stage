@@ -1,4 +1,5 @@
 import React from "react";
+import '../CSS/card.css'
 
 export default function Card({ item }) {
   const imagePath = "https://image.tmdb.org/t/p/w500";
