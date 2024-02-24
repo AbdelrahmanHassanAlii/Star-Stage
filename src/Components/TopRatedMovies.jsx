@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getTopRatedMovies } from "../JS/moviesFunctions";
 import { getTopRatedSeries } from "../JS/seriesFunction";
+import Card from "./Card";
 
 export default function TopRatedMovies() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -33,5 +34,16 @@ export default function TopRatedMovies() {
     return shuffledArray;
   }
 
-  return <></>;
+  return (
+    <>
+      <div className="top-rated-movies">
+        <h1>Top Rated Movies</h1>
+        <div className="grid-container">
+          {mixedData.map((item, index) => (
+            <Card key={index} item={item} />
+          ))}
+        </div>
+      </div>
+    </>
+  );
 }
