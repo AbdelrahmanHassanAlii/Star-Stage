@@ -42,10 +42,6 @@ export default function Trending() {
           disableOnInteraction: false,
         }}
         loop={true}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-        }}
         keyboard={{
           enabled: true,
         }}

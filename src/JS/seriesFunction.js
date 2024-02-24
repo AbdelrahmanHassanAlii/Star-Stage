@@ -1,7 +1,7 @@
 import axios from "axios";
 import { myKey } from "../index";
 
-//get top rated series
+//function to get top rated series
 export const getTopRatedSeries = async (pageNumber) => {
   try {
     const response = await axios.get(
