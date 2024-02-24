@@ -12,7 +12,7 @@ export default function TopRatedMovies() {
       .then(([movies, series]) => {
         const combinedData = [...movies, ...series];
         // Shuffle the combined data array randomly
-        const shuffledData = (combinedData);
+        const shuffledData = shuffleArray(combinedData);
         setMixedData(shuffledData);
       })
       .catch((error) => {
@@ -20,10 +20,18 @@ export default function TopRatedMovies() {
       });
   }, [pageNumber]);
 
-  
+  // Function to shuffle the array
+  function shuffleArray(array) {
+    const shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [
+        shuffledArray[j],
+        shuffledArray[i],
+      ];
+    }
+    return shuffledArray;
+  }
 
-  return (
-    <>
-    </>
-  );
+  return <></>;
 }
