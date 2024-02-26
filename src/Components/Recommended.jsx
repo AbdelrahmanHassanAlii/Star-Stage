@@ -3,6 +3,7 @@ import { getTopRatedMovies } from "../JS/moviesFunctions";
 import { getTopRatedSeries } from "../JS/seriesFunction";
 import Card from "./Card";
 import "../CSS/recommended.css";
+import Pagenation from "./Pagenation";
 
 export default function Recommended() {
   const [pageNumber, setPageNumber] = useState(1);
@@ -21,6 +22,14 @@ export default function Recommended() {
         console.error("Error fetching data:", error);
       });
   }, [pageNumber]);
+
+  const showNext = () => {
+    setPageNumber(pageNumber + 1);
+  };
+
+  const showPrevious = () => {
+    setPageNumber(pageNumber - 1);
+  };
 
   // Function to shuffle the array
   function shuffleArray(array) {
@@ -45,6 +54,7 @@ export default function Recommended() {
           ))}
         </div>
       </div>
+      <Pagenation showNext={showNext} showPrevious={showPrevious} />
     </>
   );
 }
