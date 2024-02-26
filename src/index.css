@@ -15,6 +15,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-black);
   color: var(--color-white);
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 code {

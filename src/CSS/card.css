@@ -44,6 +44,7 @@
     margin: 0;
   }
   .title {
+    color: var(--color-white);
     font-weight: bold;
     font-size: 15px;
     margin: 2px 0;
