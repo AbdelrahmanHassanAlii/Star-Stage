@@ -15,12 +15,10 @@ export default function Pagenation() {
         breakLabel="..."
         nextLabel="next >"
         marginPagesDisplayed={2}
-        // pageRangeDisplayed={5}
         onPageChange={handlePageClick}
         pageRangeDisplayed={2}
         pageCount={pageCount}
         previousLabel="< previous"
-        // renderOnZeroPageCount={null}
         containerClassName="mypagination"
       />
     </>

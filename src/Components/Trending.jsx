@@ -52,6 +52,9 @@ export default function Trending() {
           1024: {
             slidesPerView: 4.1,
           },
+          1550: {
+            slidesPerView: 5.3,
+          },
         }}
         modules={[Keyboard, Scrollbar, Navigation, Pagination, Autoplay]}
         className="mySwiper"

@@ -1,32 +1,39 @@
-/* pagination.css */
-
 .mypagination {
     display: flex;
     list-style: none;
     padding: 0;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center;
+    margin: 100px auto;
+    li {
+        display: inline-block;
+        margin-right: 5px;
+        cursor: pointer;
+
+        a {
+            background-color: var(--color-dark-blue);
+            color: var(--color-light-blue);
+            font-weight: bold;
+            text-decoration: none;
+            padding: 8px 12px;
+            border: 1px solid var(--color-light-blue);
+            border-radius: 4px;
+          }
+      }
   }
-  
-  .mypagination li {
-    display: inline-block;
-    margin-right: 5px;
-  }
-  
-  .mypagination li a {
-    color: #333;
-    text-decoration: none;
-    padding: 8px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .mypagination li a:hover {
-    background-color: #f0f0f0;
-  }
-  
+
   .mypagination .selected a {
     background-color: #007bff;
+    border-color: transparent;
     color: #fff;
   }
-  
+
+  @media screen and (max-width: 768px) {
+    .mypagination {
+      flex-wrap: wrap;
+    }
+    .mypagination li {
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
+  }
