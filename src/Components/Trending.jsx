@@ -14,6 +14,7 @@ import {
   Autoplay,
 } from "swiper/modules";
 import { getAllTrending } from "../JS/moviesFunctions";
+import { Link } from "react-router-dom";
 
 export default function Trending() {
   const [trending, setTrending] = useState(null);
@@ -69,13 +70,16 @@ export default function Trending() {
             trending.map((element) => (
               <SwiperSlide key={element.id}>
                 <div className="card-slider">
-                  <div className="card-image">
-                    <img
-                      src={`${imagePath}${element.backdrop_path}`}
-                      alt=""
-                      className="img"
-                    />
-                  </div>
+                  <Link key={element.id} to={`/details/${element.id}`}>
+                    <div className="card-image">
+                      <img
+                        src={`${imagePath}${element.backdrop_path}`}
+                        alt=""
+                        className="img"
+                      />
+                    </div>
+                  </Link>
+
                   <div className="card-content">
                     <p className="name">{element.original_title}</p>
                     <p className="type">{element.media_type}</p>
