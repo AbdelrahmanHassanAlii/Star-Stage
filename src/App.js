@@ -2,13 +2,18 @@ import Header from "./Components/Header";
 import Content from "./Components/Content";
 import "./App.css";
 import Search from "./Components/Search";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./Pages/HomePage";
+import ShowDetails from "./Components/ShowDetails";
 function App() {
   return (
     <div className="App">
       <Header />
       <div className="main-content container">
-        <Search placeHolder="Search for movies or TV series" />
-        <Content />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/details/:id" element={<ShowDetails />} />
+        </Routes>
       </div>
     </div>
   );
