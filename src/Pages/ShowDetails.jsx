@@ -39,12 +39,27 @@ export default function ShowDetails() {
             <p className="title">
               {details.name || details.original_title}{" "}
               <span>
-                {/* {getYear(details.first_air_date) ||
-                  getYear(details.release_date)} */}
                 {getYear(details.release_date) ||
                   getYear(details.first_air_date)}
               </span>
             </p>
+            <p className="tagline">{details.tagline}</p>
+            <p className="details-overview">
+              <span>Story :</span>
+              {details.overview}
+            </p>
+            {/* i want a progress bar depending on the vote_average value */}
+            <div className="details-vote">
+              <span>Rating :</span>
+              <div className="progress-bar">
+                <div
+                  className="progress"
+                  style={{ width: `${details.vote_average * 10}%` }}
+                >
+                  {details.vote_average}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       ) : null}

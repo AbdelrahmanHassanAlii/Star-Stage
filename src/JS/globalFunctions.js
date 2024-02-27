@@ -19,6 +19,7 @@ export const getDetails = async (id, name) => {
   return getMovieById(id, name);
 };
 
+//function to get the year from the date
 export const getYear = (date) => {
   if (date) {
     return date.split("-")[0];
