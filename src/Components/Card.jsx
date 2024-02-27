@@ -13,8 +13,10 @@ export default function Card({ item, number }) {
   // Check if the last item in the row is in large screen
   const isLastInRowInLargeScreen = (number + 1) % 4 === 0;
 
+  const name = item.name || item.original_title;
+
   return (
-    <Link key={item.id} to={`/details/${item.id}`}>
+    <Link key={item.id} to={`/details/${name}/${item.id}`}>
       <div
         className={`card ${
           isLastInRowInLargeScreen ? "last-in-row-in-large-screen" : ""

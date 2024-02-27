@@ -37,7 +37,7 @@ export const getTopRatedMovies = async (pageNumber) => {
 };
 
 //function to get specific movie by id
-export const getMovieById = async (id) => {
+export const getMovieById = async (id, name) => {
   try {
     const response = await axios.get(
       `https://api.themoviedb.org/3/movie/${id}`,
@@ -47,7 +47,12 @@ export const getMovieById = async (id) => {
         },
       }
     );
-    return response.data;
+    // Check if the original_name matches the provided name
+    if (response.data.original_title === name) {
+      return response.data;
+    } else {
+      return null;
+    }
   } catch (err) {
     console.error(err);
   }
