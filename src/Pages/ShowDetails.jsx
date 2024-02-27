@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getDetails } from "../JS/globalFunctions";
-import { getSeriesById } from "../JS/seriesFunction";
+import "../CSS/details.css";
 
 export default function ShowDetails() {
   const imagePath = "https://image.tmdb.org/t/p/w500";
@@ -21,16 +21,30 @@ export default function ShowDetails() {
 
   return (
     <div
-      className="show-details container"
-      style={{
-        backgroundImage:
-          details && details.backdrop_path
-            ? `url(${imagePath + details.backdrop_path})`
-            : "",
-      }}
+      className="show-details"
+      // style={{
+      //   backgroundImage:
+      //     details && details.backdrop_path
+      //       ? `url(${imagePath + details.backdrop_path})`
+      //       : "",
+      // }}
     >
       <div className="details-overlay"></div>
-      <h1>Details for {name}</h1>
+      {details ? (
+        <div className="details-content">
+          <div
+            className="images"
+            style={{
+              backgroundImage:
+                details && details.backdrop_path
+                  ? `url(${imagePath + details.backdrop_path})`
+                  : "",
+            }}
+          >
+            <img src={imagePath + details.poster_path} alt={details.name} />
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }
