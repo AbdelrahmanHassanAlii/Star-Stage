@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getDetails } from "../JS/globalFunctions";
+import { getDetails, getYear } from "../JS/globalFunctions";
 import "../CSS/details.css";
 
 export default function ShowDetails() {
@@ -20,16 +20,7 @@ export default function ShowDetails() {
   }, [id, name]);
 
   return (
-    <div
-      className="show-details"
-      // style={{
-      //   backgroundImage:
-      //     details && details.backdrop_path
-      //       ? `url(${imagePath + details.backdrop_path})`
-      //       : "",
-      // }}
-    >
-      <div className="details-overlay"></div>
+    <div className="show-details">
       {details ? (
         <div className="details-content">
           <div
@@ -41,7 +32,19 @@ export default function ShowDetails() {
                   : "",
             }}
           >
+            <div className="details-overlay"></div>
             <img src={imagePath + details.poster_path} alt={details.name} />
+          </div>
+          <div className="details-text">
+            <p className="title">
+              {details.name || details.original_title}{" "}
+              <span>
+                {/* {getYear(details.first_air_date) ||
+                  getYear(details.release_date)} */}
+                {getYear(details.release_date) ||
+                  getYear(details.first_air_date)}
+              </span>
+            </p>
           </div>
         </div>
       ) : null}

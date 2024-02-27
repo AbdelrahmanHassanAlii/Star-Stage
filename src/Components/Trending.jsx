@@ -70,7 +70,12 @@ export default function Trending() {
             trending.map((element) => (
               <SwiperSlide key={element.id}>
                 <div className="card-slider">
-                  <Link key={element.id} to={`/details/${element.id}`}>
+                  <Link
+                    key={element.id}
+                    to={`/details/${
+                      element.original_title || element.original_name
+                    }/${element.id}`}
+                  >
                     <div className="card-image">
                       <img
                         src={`${imagePath}${element.backdrop_path}`}
