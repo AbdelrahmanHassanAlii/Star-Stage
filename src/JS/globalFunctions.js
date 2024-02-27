@@ -9,7 +9,12 @@ export const truncate = (text, maxLength) => {
   return text;
 };
 
-//function get the id amd the name and check two APIs the return which is not null
-export const getDetails = (id, name) => {
-  return getMovieById(id, name) || getSeriesById(id, name);
+
+//function to get the id and the name and check two APIs then return the non-null response
+export const getDetails = async (id, name) => {
+  const seriesDetails = await getSeriesById(id, name);
+  if (seriesDetails !== null) {
+    return seriesDetails;
+  }
+  return getMovieById(id, name);
 };

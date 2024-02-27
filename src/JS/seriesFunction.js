@@ -29,8 +29,8 @@ export const getSeriesById = async (id, name) => {
     });
 
     // Check if the original_name matches the provided name
-    if (response.data.original_name === name) {
-      return response.data;
+    if (response.data.name === name) {
+       return response.data;
     } else {
       return null;
     }
@@ -39,4 +39,3 @@ export const getSeriesById = async (id, name) => {
     return null;
   }
 };
-
