@@ -1,7 +1,5 @@
 import Header from "./Components/Header";
-import Content from "./Components/Content";
 import "./App.css";
-import Search from "./Components/Search";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import ShowDetails from "./Components/ShowDetails";

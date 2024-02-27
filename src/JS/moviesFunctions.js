@@ -35,3 +35,20 @@ export const getTopRatedMovies = async (pageNumber) => {
     console.error(err);
   }
 };
+
+//function to get specific movie by id
+export const getMovieById = async (id) => {
+  try {
+    const response = await axios.get(
+      `https://api.themoviedb.org/3/movie/${id}`,
+      {
+        params: {
+          api_key: myKey,
+        },
+      }
+    );
+    return response.data;
+  } catch (err) {
+    console.error(err);
+  }
+};
