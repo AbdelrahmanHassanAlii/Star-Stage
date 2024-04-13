@@ -52,12 +52,12 @@
     opacity: 0.5;
   }
   .details-content {
-    @media screen and (min-width: 768px) {
+    /* @media screen and (min-width: 768px) {
       .details-content {
         width: 50%;
         margin: auto;
       }
-    }
+    } */
     .details-overview {
       color: var(--color-light-blue);
       font-size: 1rem;
@@ -134,7 +134,7 @@
       gap: 20px;
 
       .season {
-        width: 30%;
+        width: 25%;
       }
     }
   }
@@ -152,5 +152,12 @@
   }
   100% {
     width: calc(var(--skill-width)); /* Animate from 0 to the desired width */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .narrow-container {
+    width: 90%;
+    margin: auto;
   }
 }

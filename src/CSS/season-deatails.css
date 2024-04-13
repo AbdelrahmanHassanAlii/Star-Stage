@@ -1,0 +1,38 @@
+.episode-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 20px;
+}
+
+.episode-card {
+  width: 25%;
+  background-color: var(--color-dark-blue);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  overflow: hidden;
+}
+@media screen and (max-width: 400px) {
+  .episode-card {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .episode-card {
+    width: 40%;
+  }
+}
+
+.episode-card img {
+  width: 100%;
+}
+
+.episode-content {
+  padding: 5px;
+  text-align: center;
+}

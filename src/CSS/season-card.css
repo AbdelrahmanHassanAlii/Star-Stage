@@ -8,8 +8,10 @@
   overflow: hidden;
   background-color: var(--color-dark-blue);
   .season-image {
+    height: 50%;
     img {
       width: 100%;
+      height: 100% !important;
     }
   }
   .season-content {

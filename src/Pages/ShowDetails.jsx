@@ -37,7 +37,7 @@ export default function ShowDetails() {
             <div className="details-overlay"></div>
             <img src={imagePath + details.poster_path} alt={details.name} />
           </div>
-          <div className="details-text">
+          <div className="details-text narrow-container">
             <p className="title">
               {details.name || details.original_title}{" "}
               <span>
@@ -91,7 +91,9 @@ export default function ShowDetails() {
             </div>
           </div>
         </div>
-      ) : <Loading />}
+      ) : (
+        <Loading />
+      )}
     </div>
   );
 }
