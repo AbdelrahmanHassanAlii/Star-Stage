@@ -56,3 +56,17 @@ export const getSeasonById = async (id, seasonNumber) => {
     console.error(err);
   }
 }
+
+//function to get poster path image for seies by given id
+export const getSeriesPoster = async (id) => {
+  try {
+    const response = await axios.get(`https://api.themoviedb.org/3/tv/${id}`, {
+      params: {
+        api_key: myKey,
+      },
+    });
+    return response.data.poster_path;
+  } catch (err) {
+    console.error(err);
+  }
+}
