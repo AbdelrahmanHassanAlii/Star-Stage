@@ -151,6 +151,6 @@
     width: 0;
   }
   100% {
-    width: calc(var(--skill-width) * 1%);
+    width: calc(var(--skill-width)); /* Animate from 0 to the desired width */
   }
 }

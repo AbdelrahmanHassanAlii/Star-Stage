@@ -17,6 +17,7 @@ export default function SeasonDetails() {
           getSeriesById(id, name),
         ]);
         setDetails(seasonData);
+        console.log(seasonData);
         setPosterImage(seriesData.backdrop_path);
       } catch (error) {
         console.error("Error fetching data:", error);

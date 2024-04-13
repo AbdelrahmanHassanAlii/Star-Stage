@@ -59,6 +59,7 @@ export default function ShowDetails() {
                   <div
                     className="progress"
                     style={{
+                      "--skill-width": `${details.vote_average * 10}%`,
                       width: `${details.vote_average * 10}%`,
                     }}
                   ></div>
@@ -76,7 +77,12 @@ export default function ShowDetails() {
                 {details && details.seasons && details.seasons.length > 0
                   ? details.seasons.map((season) => (
                       <div className="season" key={season.id}>
-                        <SeasonCard item={season} id={id} key={season.id} seriesName={name} />
+                        <SeasonCard
+                          item={season}
+                          id={id}
+                          key={season.id}
+                          seriesName={name}
+                        />
                       </div>
                     ))
                   : null}
