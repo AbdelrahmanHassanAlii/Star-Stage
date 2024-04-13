@@ -129,8 +129,20 @@
     }
     .seasons {
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
+      gap: 20px;
+
+      .season {
+        width: 30%;
+      }
     }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .season {
+    width: 45% !important;
   }
 }
 

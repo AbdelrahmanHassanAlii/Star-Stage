@@ -74,13 +74,15 @@ export default function ShowDetails() {
                   ))}
                 </ul>
               </div>
-              {
-                details.seasons && details.seasons.map((season) => (
-                  <div className="seasons">
-                    <SeasonCard item={season} />
-                  </div>
-                ))
-              }
+              <div className="seasons">
+                {details.seasons && details.seasons.length > 0
+                  ? details.seasons.map((season) => (
+                      <div className="season">
+                        <SeasonCard key={season.id} item={season} />
+                      </div>
+                    ))
+                  : null}
+              </div>
             </div>
           </div>
         </div>
