@@ -39,3 +39,20 @@ export const getSeriesById = async (id, name) => {
     return null;
   }
 };
+
+//function to get season by id
+export const getSeasonById = async (id, seasonNumber) => {
+  try {
+    const response = await axios.get(
+      `https://api.themoviedb.org/3/tv/${id}/season/${seasonNumber}`,
+      {
+        params: {
+          api_key: myKey,
+        },
+      }
+    );
+    return response.data;
+  } catch (err) {
+    console.error(err);
+  }
+}
