@@ -49,19 +49,6 @@ export default function ShowDetails() {
                 <span>Story :</span>
                 {details.overview}
               </p>
-              {/* i want a progress bar depending on the vote_average value */}
-              {/* <div className="details-vote">
-                <span>Rating :</span>
-                <div className="progress-bar">
-                  <div
-                    className="progress"
-                    style={{
-                      width: `${details.vote_average * 10}%`,
-                      "--skill-width": details.vote_average * 10,
-                    }}
-                  ></div>
-                </div>
-              </div> */}
               <div className="details-vote">
                 <div className="votes">
                   <span>{details.vote_count} Votes | </span>
@@ -77,6 +64,14 @@ export default function ShowDetails() {
                     }}
                   ></div>
                 </div>
+              </div>
+              <div className="genres">
+                <span>Genres :</span>
+                <ul>
+                  {details.genres.map((genre) => (
+                    <li key={genre.id}>{genre.name}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
