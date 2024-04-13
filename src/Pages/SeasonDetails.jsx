@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getSeasonById, getSeriesById, getSeriesPoster } from "../JS/seriesFunction";
+import { getSeasonById, getSeriesById } from "../JS/seriesFunction";
 import { useParams } from "react-router-dom";
 import { getYear } from "../JS/globalFunctions";
 
@@ -10,25 +10,20 @@ export default function SeasonDetails() {
   const imagePath = "https://image.tmdb.org/t/p/w500";
 
   useEffect(() => {
-    getSeasonById(id, number)
-      .then((data) => {
-        console.log(data);
-        setDetails(data);
-      })
-      .catch((error) => {
+    const fetchData = async () => {
+      try {
+        const [seasonData, seriesData] = await Promise.all([
+          getSeasonById(id, number),
+          getSeriesById(id, name),
+        ]);
+        setDetails(seasonData);
+        setPosterImage(seriesData.backdrop_path);
+      } catch (error) {
         console.error("Error fetching data:", error);
-      });
-  }, [id, number]);
-
-  useEffect(() => {
-    getSeriesById(id, name)
-      .then((data) => {
-        setPosterImage(data.backdrop_path); // Set poster image directly
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  }, [id]); // Fetch poster only when ID changes
+      }
+    };
+    fetchData();
+  }, [id, number, name]);
 
   return (
     <div className="show-details">
