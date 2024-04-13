@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getDetails, getYear } from "../JS/globalFunctions";
 import "../CSS/details.css";
+import SeasonCard from "../Components/SeasonCard";
 
 export default function ShowDetails() {
   const imagePath = "https://image.tmdb.org/t/p/w500";
@@ -73,6 +74,13 @@ export default function ShowDetails() {
                   ))}
                 </ul>
               </div>
+              {
+                details.seasons && details.seasons.map((season) => (
+                  <div className="seasons">
+                    <SeasonCard item={season} />
+                  </div>
+                ))
+              }
             </div>
           </div>
         </div>

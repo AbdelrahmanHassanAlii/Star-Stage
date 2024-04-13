@@ -127,6 +127,10 @@
         }
       }
     }
+    .seasons {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 }
 

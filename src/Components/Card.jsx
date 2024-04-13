@@ -6,9 +6,9 @@ import { truncate } from "../JS/globalFunctions";
 export default function Card({ item, number }) {
   const imagePath = "https://image.tmdb.org/t/p/w500";
 
-  const extractYear = (date) => {
-    return date.split("-")[0];
-  };
+  // const extractYear = (date) => {
+  //   return date.split("-")[0];
+  // };
 
   // Check if the last item in the row is in large screen
   const isLastInRowInLargeScreen = (number + 1) % 4 === 0;
@@ -25,9 +25,9 @@ export default function Card({ item, number }) {
         <img src={`${imagePath}${item.backdrop_path}`} alt={item.name} />
         <div className="card-content">
           {item.release_date ? (
-            <p className="date">{extractYear(item.release_date)}</p>
+            <p className="date">{item.release_date}</p>
           ) : (
-            <p className="date">{extractYear(item.first_air_date)}</p>
+            <p className="date">{item.first_air_date}</p>
           )}
           {item.original_title ? (
             <p className="title">{item.original_title}</p>
