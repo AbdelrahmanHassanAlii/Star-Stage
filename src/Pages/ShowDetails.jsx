@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getDetails, getYear } from "../JS/globalFunctions";
 import "../CSS/details.css";
 import SeasonCard from "../Components/SeasonCard";
+import Loading from "../Components/Loading";
 
 export default function ShowDetails() {
   const imagePath = "https://image.tmdb.org/t/p/w500";
@@ -90,7 +91,7 @@ export default function ShowDetails() {
             </div>
           </div>
         </div>
-      ) : null}
+      ) : <Loading />}
     </div>
   );
 }

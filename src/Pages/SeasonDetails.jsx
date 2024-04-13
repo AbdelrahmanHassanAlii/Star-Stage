@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getSeasonById, getSeriesById } from "../JS/seriesFunction";
 import { useParams } from "react-router-dom";
 import { getYear } from "../JS/globalFunctions";
+import Loading from "../Components/Loading";
 
 export default function SeasonDetails() {
   const { id, number, name } = useParams();
@@ -55,7 +56,7 @@ export default function SeasonDetails() {
           </div>
         </div>
       ) : (
-        <div className="loading">Loading...</div>
+        <Loading />
       )}
     </div>
   );
