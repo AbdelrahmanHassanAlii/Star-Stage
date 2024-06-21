@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import ShowDetails from "./Pages/ShowDetails";
 import SeasonDetails from "./Pages/SeasonDetails";
+import Movies from "./Pages/Movies";
 function App() {
   return (
     <div className="App">
@@ -11,8 +12,12 @@ function App() {
       <div className="main-content container">
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/movies" element={<Movies />} />
           <Route path="/details/:name/:id" element={<ShowDetails />} />
-          <Route path="/:name/seasons/:number/:id" element={<SeasonDetails />} />
+          <Route
+            path="/:name/seasons/:number/:id"
+            element={<SeasonDetails />}
+          />
         </Routes>
       </div>
     </div>

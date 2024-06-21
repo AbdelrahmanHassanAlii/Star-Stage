@@ -16,7 +16,7 @@ export default function Header() {
             <NavLink to="/" exact activeClassName="active-link">
               <i className="fa-brands fa-microsoft"></i>
             </NavLink>
-            <NavLink to="/films" activeClassName="active-link">
+            <NavLink to="/movies" activeClassName="active-link">
               <i className="fa-solid fa-film"></i>
             </NavLink>
             <NavLink to="/tv" activeClassName="active-link">
