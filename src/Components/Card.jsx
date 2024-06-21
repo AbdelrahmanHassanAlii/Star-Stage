@@ -6,11 +6,9 @@ import { truncate } from "../JS/globalFunctions";
 export default function Card({ item, number }) {
   const imagePath = "https://image.tmdb.org/t/p/w500";
 
-  // const extractYear = (date) => {
-  //   return date.split("-")[0];
-  // };
-
-  // Check if the last item in the row is in large screen
+  // Check if the card is the first item in the row on large screens
+  const isFirstInRowInLargeScreen = number % 4 === 0;
+  // Check if the card is the last item in the row on large screens
   const isLastInRowInLargeScreen = (number + 1) % 4 === 0;
 
   const name = item.name || item.original_title;
@@ -19,8 +17,8 @@ export default function Card({ item, number }) {
     <Link key={item.id} to={`/details/${name}/${item.id}`}>
       <div
         className={`card ${
-          isLastInRowInLargeScreen ? "last-in-row-in-large-screen" : ""
-        }`}
+          isFirstInRowInLargeScreen ? "first-in-row-in-large-screen" : ""
+        } ${isLastInRowInLargeScreen ? "last-in-row-in-large-screen" : ""}`}
       >
         <img src={`${imagePath}${item.backdrop_path}`} alt={item.name} />
         <div className="card-content">

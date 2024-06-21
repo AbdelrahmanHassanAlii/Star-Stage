@@ -56,8 +56,18 @@
     visibility: hidden;
   }
 
-  /* Only apply transform origin to the last card in a row */
-  &:last-child {
+  /* Only apply transform origin to the first and last card in a row */
+  &.first-in-row-in-large-screen {
+    @media screen and (min-width: 768px) {
+      transform-origin: left;
+      -webkit-transform-origin: left;
+      -moz-transform-origin: left;
+      -ms-transform-origin: left;
+      -o-transform-origin: left;
+    }
+  }
+
+  &.last-in-row-in-large-screen {
     @media screen and (min-width: 768px) {
       transform-origin: right;
       -webkit-transform-origin: right;
@@ -65,15 +75,5 @@
       -ms-transform-origin: right;
       -o-transform-origin: right;
     }
-  }
-}
-
-.card.last-in-row-in-large-screen {
-  @media screen and (min-width: 768px) {
-    transform-origin: right;
-    -webkit-transform-origin: right;
-    -moz-transform-origin: right;
-    -ms-transform-origin: right;
-    -o-transform-origin: right;
   }
 }
