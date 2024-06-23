@@ -59,13 +59,14 @@ export const getMovieById = async (id, name) => {
 };
 
 //function to get the  name of the category of the movies then return the movies of that category
-export const getMoviesByCategory = async (category) => {
+export const getMoviesByCategory = async (category, pageNumber) => {
   try {
     const response = await axios.get(
       `https://api.themoviedb.org/3/movie/${category}`,
       {
         params: {
           api_key: myKey,
+          page: pageNumber,
         },
       }
     );
