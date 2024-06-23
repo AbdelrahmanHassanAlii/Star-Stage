@@ -5,7 +5,7 @@ import HomePage from "./Pages/HomePage";
 import ShowDetails from "./Pages/ShowDetails";
 import SeasonDetails from "./Pages/SeasonDetails";
 import Movies from "./Pages/Movies";
-import MovieCategory from "./Components/MovieCategory";
+import MovieCategory from "./Pages/MovieCategory";
 function App() {
   return (
     <div className="App">

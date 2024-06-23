@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getMoviesByCategory } from "../JS/moviesFunctions";
-import Card from "./Card";
+import Card from "../Components/Card";
 
 export default function MovieCategory() {
   let { category } = useParams();
