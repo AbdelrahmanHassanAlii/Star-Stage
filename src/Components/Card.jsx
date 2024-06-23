@@ -32,7 +32,7 @@ export default function Card({ item, number }) {
           ) : (
             <p className="title">{item.name}</p>
           )}
-          {<p className="description">{truncate(item.overview, 10)}</p>}
+          {<p className="description">{truncate(item.overview, 7)}</p>}
         </div>
       </div>
     </Link>
