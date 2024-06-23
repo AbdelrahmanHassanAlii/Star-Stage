@@ -29,7 +29,7 @@ export default function Movies() {
 
       <CategoryCard
         type="movie"
-        category="up_coming"
+        category="upcoming"
         title="Upcoming Movies"
         image={image}
       />

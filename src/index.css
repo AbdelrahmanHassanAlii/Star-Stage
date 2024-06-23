@@ -16,6 +16,7 @@ body {
   background-color: var(--color-black);
   color: var(--color-white);
   list-style: none;
+  overflow-x: hidden;
 }
 
 a {
