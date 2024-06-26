@@ -6,6 +6,7 @@ import ShowDetails from "./Pages/ShowDetails";
 import SeasonDetails from "./Pages/SeasonDetails";
 import Movies from "./Pages/Movies";
 import MovieCategory from "./Pages/MovieCategory";
+import TvSeries from "./Pages/TvSeries";
 function App() {
   return (
     <div className="App">
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<Movies />} />
+          <Route path="/tv" element={<TvSeries />} />
           <Route path="/details/:name/:id" element={<ShowDetails />} />
           <Route
             path="/:name/seasons/:number/:id"
