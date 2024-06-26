@@ -28,9 +28,9 @@ export default function Card({ item, number }) {
             <p className="date">{item.first_air_date}</p>
           )}
           {item.original_title ? (
-            <p className="title">{item.original_title}</p>
+            <p className="title">{truncate(item.original_title, 5)}</p>
           ) : (
-            <p className="title">{item.name}</p>
+            <p className="title">{truncate(item.name, 5)}</p>
           )}
           {<p className="description">{truncate(item.overview, 7)}</p>}
         </div>
