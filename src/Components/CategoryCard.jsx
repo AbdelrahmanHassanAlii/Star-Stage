@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function CategoryCard({ type, category, title, image }) {
   return (
-    <Link to={`/movies/${category}`}>
+    <Link to={`/${type}/${category}`}>
       <div className="category-card">
         <div
           className="category-card-bg"

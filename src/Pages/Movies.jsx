@@ -7,28 +7,28 @@ export default function Movies() {
     <div className="movies">
       <h1>Movies</h1>
       <CategoryCard
-        type="movie"
+        type="movies"
         category="popular"
         title="Popular Movies"
         image={image}
       />
 
       <CategoryCard
-        type="movie"
+        type="movies"
         category="top_rated"
         title="Top Rated Movies"
         image={image}
       />
 
       <CategoryCard
-        type="movie"
+        type="movies"
         category="now_playing"
         title="Now Playing Movies"
         image={image}
       />
 
       <CategoryCard
-        type="movie"
+        type="movies"
         category="upcoming"
         title="Upcoming Movies"
         image={image}
