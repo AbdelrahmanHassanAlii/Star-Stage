@@ -70,3 +70,21 @@ export const getSeriesPoster = async (id) => {
     console.error(err);
   }
 }
+
+//function get the name of the category of tv series and return the movies of that category
+export const getSeriesByCategory = async (category, pageNumber) => {
+  try {
+    const response = await axios.get(
+      `https://api.themoviedb.org/3/tv/${category}`,
+      {
+        params: {
+          api_key: myKey,
+          page: pageNumber,
+        },
+      }
+    );
+    return Array.from(response.data.results);
+  } catch (err) {
+    console.error(err);
+  }
+}
