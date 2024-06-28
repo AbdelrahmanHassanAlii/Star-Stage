@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../CSS/card.css";
 import { truncate } from "../JS/globalFunctions";
+import { FaHeart } from "react-icons/fa6";
+
 
 export default function Card({ item, number }) {
   const imagePath = "https://image.tmdb.org/t/p/w500";
@@ -21,6 +23,9 @@ export default function Card({ item, number }) {
         } ${isLastInRowInLargeScreen ? "last-in-row-in-large-screen" : ""}`}
       >
         <img src={`${imagePath}${item.backdrop_path}`} alt={item.name} />
+        <div className="card-like-button">
+          <FaHeart />
+        </div>
         <div className="card-content">
           {item.release_date ? (
             <p className="date">{item.release_date}</p>
