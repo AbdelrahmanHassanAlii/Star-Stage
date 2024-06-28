@@ -55,7 +55,7 @@ export const getSeasonById = async (id, seasonNumber) => {
   } catch (err) {
     console.error(err);
   }
-}
+};
 
 //function to get poster path image for seies by given id
 export const getSeriesPoster = async (id) => {
@@ -69,7 +69,7 @@ export const getSeriesPoster = async (id) => {
   } catch (err) {
     console.error(err);
   }
-}
+};
 
 //function get the name of the category of tv series and return the movies of that category
 export const getSeriesByCategory = async (category, pageNumber) => {
@@ -87,4 +87,25 @@ export const getSeriesByCategory = async (category, pageNumber) => {
   } catch (err) {
     console.error(err);
   }
-}
+};
+
+//function get series_id and season_number and episode_number then return the episode details
+export const getEpisodeDetails = async (
+  seriesId,
+  seasonNumber,
+  episodeNumber
+) => {
+  try {
+    const response = await axios.get(
+      `https://api.themoviedb.org/3/tv/${seriesId}/season/${seasonNumber}/episode/${episodeNumber}`,
+      {
+        params: {
+          api_key: myKey,
+        },
+      }
+    );
+    return response.data;
+  } catch (err) {
+    console.error(err);
+  }
+};
