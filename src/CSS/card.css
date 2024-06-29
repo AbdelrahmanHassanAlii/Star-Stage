@@ -50,7 +50,7 @@
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
-    background-color: var(--color-light-blue);
+    background-color: var(--color-dark-blue);
 
     &:hover {
       color: crimson;

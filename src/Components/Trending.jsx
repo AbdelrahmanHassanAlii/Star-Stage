@@ -15,6 +15,7 @@ import {
 } from "swiper/modules";
 import { getAllTrending } from "../JS/moviesFunctions";
 import { Link } from "react-router-dom";
+import { FaHeart } from "react-icons/fa6";
 
 export default function Trending() {
   const [trending, setTrending] = useState(null);
@@ -84,6 +85,10 @@ export default function Trending() {
                       />
                     </div>
                   </Link>
+
+                  <div className="card-like-button">
+                    <FaHeart />
+                  </div>
 
                   <div className="card-content">
                     <p className="name">{element.original_title}</p>
