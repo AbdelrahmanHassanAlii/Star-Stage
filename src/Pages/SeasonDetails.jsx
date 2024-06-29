@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getSeasonById, getSeriesById } from "../JS/seriesFunction";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { getYear } from "../JS/globalFunctions";
 import Loading from "../Components/Loading";
 import '../CSS/season-deatails.css'
@@ -59,7 +59,11 @@ export default function SeasonDetails() {
             <h3>Episodes</h3>
             <div className="episode-cards">
               {details.episodes.map((episode) => (
-                <div className="episode-card" key={episode.id}>
+                <Link
+                  to={`/${name}/${id}/seasons/${number}/${episode.episode_number}`}
+                  className="episode-card"
+                  key={episode.id}
+                >
                   {episode.still_path && (
                     <img
                       src={`${imagePath + episode.still_path}`}
@@ -72,11 +76,10 @@ export default function SeasonDetails() {
                     </p>
                     <p>{getYear(episode.air_date)}</p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
-
         </div>
       ) : (
         <Loading />

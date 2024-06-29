@@ -8,6 +8,7 @@ import Movies from "./Pages/Movies";
 import MovieCategory from "./Pages/MovieCategory";
 import TvSeries from "./Pages/TvSeries";
 import TvSeriesCategory from "./Pages/TvSeriesCategory";
+import SeriesDetails from "./Pages/SeriesDetails";
 function App() {
   return (
     <div className="App">
@@ -24,6 +25,10 @@ function App() {
           />
           <Route path="/movies/:category" element={<MovieCategory />} />
           <Route path="/tv/:category" element={<TvSeriesCategory />} />
+          <Route
+            path="/:seriesName/:seriesId/seasons/:seasonNumber/:episodeNumber"
+            element={<SeriesDetails />}
+          />
         </Routes>
       </div>
     </div>
