@@ -8,7 +8,7 @@ import Movies from "./Pages/Movies";
 import MovieCategory from "./Pages/MovieCategory";
 import TvSeries from "./Pages/TvSeries";
 import TvSeriesCategory from "./Pages/TvSeriesCategory";
-import SeriesDetails from "./Pages/SeriesDetails";
+import SeriesDetails from "./Pages/EpisoteDetails";
 function App() {
   return (
     <div className="App">
