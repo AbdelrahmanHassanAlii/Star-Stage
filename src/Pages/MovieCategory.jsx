@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getMoviesByCategory, searchMovies } from "../JS/moviesFunctions";
 import Card from "../Components/Card";
 import Pagination from "../Components/Pagenation";
+import "../CSS/movie-category.css";
 
 export default function MovieCategory() {
   let { category } = useParams();
@@ -71,7 +72,9 @@ export default function MovieCategory() {
         />
       </div>
       <div className="movie-category container">
-        <h1 className="title">{query ? "Search Results" : `${category} Movies`}</h1>
+        <h1 className="main-title">
+          {query ? `Search Results for "${query}"` : `${category} Movies`}
+        </h1>
         <div className="cards grid-container">
           {Array.isArray(movies) && movies.length > 0 ? (
             movies.map((movie) => (
