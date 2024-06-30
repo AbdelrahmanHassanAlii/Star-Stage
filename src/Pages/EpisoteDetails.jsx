@@ -63,7 +63,6 @@ export default function EposideDetails() {
             ></iframe>
           </div> */}
         </div>
-
       )}
     </div>
   );

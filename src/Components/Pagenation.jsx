@@ -2,7 +2,7 @@ import React from "react";
 import ReactPaginate from "react-paginate";
 import "../CSS/pagination.css";
 
-export default function Pagination({ pageNumber, showNext, showPrevious }) {
+export default function Pagination({ totalpages, pageNumber, showNext, showPrevious }) {
   const handlePageClick = (selectedItem) => {
     // Check if the user clicked on "previous" or "next" button
     if (selectedItem.selected === 0) {
@@ -14,7 +14,7 @@ export default function Pagination({ pageNumber, showNext, showPrevious }) {
     }
   };
 
-  const pageCount = pageNumber || 250;
+  const pageCount = totalpages || pageNumber || 250;
   return (
     <>
       <ReactPaginate

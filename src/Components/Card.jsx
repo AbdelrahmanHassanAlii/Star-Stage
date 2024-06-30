@@ -22,7 +22,11 @@ export default function Card({ item, number }) {
           isFirstInRowInLargeScreen ? "first-in-row-in-large-screen" : ""
         } ${isLastInRowInLargeScreen ? "last-in-row-in-large-screen" : ""}`}
       >
-        <img src={`${imagePath}${item.backdrop_path}`} alt={item.name} />
+        <img
+          src={`${imagePath}${item.backdrop_path || item.poster_path}`}
+          alt={item.name}
+          style={item.poster_path ? { height: '200px' } : {}}
+        />
         <div className="card-like-button">
           <FaHeart />
         </div>
