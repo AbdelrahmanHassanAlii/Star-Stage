@@ -1,0 +1,101 @@
+.episode-details {
+  .details-content {
+    @media screen and (min-width: 768px) {
+      width: 80%;
+      margin: auto;
+    }
+    .images {
+      text-align: center;
+    }
+    img {
+      border-radius: 20px;
+    }
+    .date {
+      text-align: center;
+      color: var(--color-light-blue);
+      font-size: 12px;
+      font-weight: bold;
+    }
+    .title {
+      text-align: center;
+      color: var(--color-light-blue);
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .overview {
+      text-align: center;
+      color: var(--color-light-blue);
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .details-vote {
+      margin: auto;
+      margin-bottom: 30px;
+      span {
+        color: var(--color-gray);
+        font-weight: bold;
+      }
+      .votes {
+        text-align: end;
+        font-weight: bold;
+        color: var(--color-light-blue);
+        font-size: 0.7rem;
+      }
+      .progress-bar {
+        height: 7px;
+        background-color: #ccc;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        margin-top: 5px;
+        overflow: hidden;
+        .progress {
+          padding: 2px;
+          font-size: 12px;
+          font-weight: bold;
+          height: 100%;
+          color: white;
+          background-color: var(--color-light-blue);
+          animation: progressAnimation 2s;
+          text-align: center;
+        }
+      }
+    }
+    .details-guest-stars {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      .guest-star {
+        background-color: var(--color-light-blue);
+        padding: 5px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        color: var(--color-dark-blue);
+        font-weight: bold;
+        font-size: 12px;
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .episode-details img {
+    width: 300px;
+  }
+}
