@@ -109,3 +109,22 @@ export const getEpisodeDetails = async (
     console.error(err);
   }
 };
+
+//function get the query and the page the search for a series 
+export const searchSeries = async (query, pageNumber) => {
+  try {
+    const response = await axios.get(
+      `https://api.themoviedb.org/3/search/tv`,
+      {
+        params: {
+          api_key: myKey,
+          query: query,
+          page: pageNumber,
+        },
+      }
+    );
+    return response.data;
+  } catch (err) {
+    console.error(err);
+  }
+}
