@@ -75,3 +75,22 @@ export const getMoviesByCategory = async (category, pageNumber) => {
     console.error(err);
   }
 };
+
+//function get the page and movie name then search for it
+export const searchMovies = async (query, pageNumber) => {
+  try {
+    const response = await axios.get(
+      `https://api.themoviedb.org/3/search/movie`,
+      {
+        params: {
+          api_key: myKey,
+          query: query,
+          page: pageNumber,
+        },
+      }
+    );
+    return response.data;
+  } catch (err) {
+    console.error(err);
+  }
+};
