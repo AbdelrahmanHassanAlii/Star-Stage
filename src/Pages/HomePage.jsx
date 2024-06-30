@@ -5,7 +5,7 @@ import Content from "../Components/Content";
 export default function HomePage() {
   return (
     <div>
-      <Search placeHolder="Search for movies or TV series" />
+      {/* <Search placeHolder="Search for movies or TV series" /> */}
       <Content />
     </div>
   );
