@@ -9,6 +9,7 @@ import MovieCategory from "./Pages/MovieCategory";
 import TvSeries from "./Pages/TvSeries";
 import TvSeriesCategory from "./Pages/TvSeriesCategory";
 import SeriesDetails from "./Pages/EpisoteDetails";
+import LikedItems from "./Pages/LikedItems";
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/movies" element={<Movies />} />
           <Route path="/tv" element={<TvSeries />} />
+          <Route path="/bookmarks" element={<LikedItems />} />
           <Route path="/details/:name/:id" element={<ShowDetails />} />
           <Route
             path="/:name/seasons/:number/:id"
