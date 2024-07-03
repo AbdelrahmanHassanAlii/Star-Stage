@@ -65,6 +65,11 @@
   .card-like-button.liked {
         color: crimson;
       background-color: var(--color-white);
+      
+      &:hover {
+      color: white;
+        background-color: var(--color-dark-blue);
+      }
 }
 
   img {

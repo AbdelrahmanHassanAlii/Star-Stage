@@ -1,4 +1,3 @@
-// import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -16,10 +15,14 @@ import {
 import { getAllTrending } from "../JS/moviesFunctions";
 import { Link } from "react-router-dom";
 import { FaHeart } from "react-icons/fa6";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleLiked } from "../Redux/actions/likeActions";
 
 export default function Trending() {
   const [trending, setTrending] = useState(null);
   const imagePath = "https://image.tmdb.org/t/p/w500";
+  const dispatch = useDispatch();
+  const likedItems = useSelector((state) => state.liked.likedItems);
 
   useEffect(() => {
     getAllTrending()
@@ -30,6 +33,15 @@ export default function Trending() {
         console.error("Error fetching trending data:", error);
       });
   }, []);
+
+  const handleLikeClick = (e, item) => {
+    e.preventDefault();
+    dispatch(toggleLiked(item));
+  };
+
+  const isLiked = (item) => {
+    return likedItems.some((likedItem) => likedItem.id === item.id);
+  };
 
   return (
     <div className="trending">
@@ -86,7 +98,12 @@ export default function Trending() {
                     </div>
                   </Link>
 
-                  <div className="card-like-button">
+                  <div
+                    className={`card-like-button ${
+                      isLiked(element) ? "liked" : ""
+                    }`}
+                    onClick={(e) => handleLikeClick(e, element)}
+                  >
                     <FaHeart />
                   </div>
 
