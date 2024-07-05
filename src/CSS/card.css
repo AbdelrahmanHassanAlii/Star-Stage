@@ -63,14 +63,14 @@
   }
 
   .card-like-button.liked {
-        color: crimson;
-      background-color: var(--color-white);
-      
-      &:hover {
+    color: crimson;
+    background-color: var(--color-white);
+
+    &:hover {
       color: white;
-        background-color: var(--color-dark-blue);
-      }
-}
+      background-color: var(--color-dark-blue);
+    }
+  }
 
   img {
     width: 100%;
@@ -88,14 +88,20 @@
   }
   .date {
     color: var(--color-light-blue);
-    font-size: 12px;
+    font-size: 12px !important;
     margin: 0;
+    @media screen and (max-width: 400px) {
+      font-size: 9px !important;
+    }
   }
   .title {
     color: var(--color-white);
     font-weight: bold;
-    font-size: 15px;
+    font-size: 15px !important;
     margin: 2px 0;
+    @media screen and (max-width: 400px) {
+      font-size: 15px !important;
+    }
   }
   .description {
     font-size: 10px;
