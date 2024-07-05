@@ -45,7 +45,7 @@ export default function Trending() {
 
   return (
     <div className="trending">
-      <h1>Trending</h1>
+      <h1 className="title">Trending</h1>
       <Swiper
         slidesPerView={1.05}
         centeredSlides={false}
