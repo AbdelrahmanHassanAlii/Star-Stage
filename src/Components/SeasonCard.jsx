@@ -15,8 +15,8 @@ export default function SeasonCard({ item, id, seriesName }) {
         </div>
         <div className="season-content">
           <h3 className="season-title">{item.name}</h3>
-          <p>Episode {item.episode_count}</p>
-          <p>Release date: {releaseYear}</p>
+          <p className="season-episode-count">Episode {item.episode_count}</p>
+          <p className="season-release-date">Release date: {releaseYear}</p>
         </div>
       </div>
     </Link>

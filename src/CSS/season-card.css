@@ -23,5 +23,28 @@
     padding: 5px;
     text-align: center;
     color: var(--color-gray);
+    .season-title {
+      color: var(--color-light-blue);
+      font-weight: bold;
+      font-size: 1.5rem;
+      @media screen and (max-width: 400px) {
+        font-size: 1rem;
+      }
+    }
+    .season-episode-count {
+      color: var(--color-gray);
+      font-weight: bold;
+      font-size: 1.2rem;
+      @media screen and (max-width: 400px) {
+        font-size: 0.8rem;
+      }
+    }
+    .season-release-date {
+      color: var(--color-gray);
+      font-size: 1.1rem;
+      @media screen and (max-width: 400px) {
+        font-size: 0.7rem;
+      }
+    }
   }
 }

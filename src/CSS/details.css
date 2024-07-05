@@ -43,6 +43,9 @@
       font-size: 9px;
       color: var(--color-gray);
     }
+    @media screen and (max-width: 400px) {
+      font-size: 1.2rem;
+    }
   }
   .tagline {
     text-align: center;
@@ -50,14 +53,11 @@
     font-size: 00.9rem;
     font-weight: bold;
     opacity: 0.5;
+    @media screen and (max-width: 400px) {
+      font-size: 0.7rem;
+    }
   }
   .details-content {
-    /* @media screen and (min-width: 768px) {
-      .details-content {
-        width: 50%;
-        margin: auto;
-      }
-    } */
     .details-overview {
       color: var(--color-light-blue);
       font-size: 1rem;
@@ -67,6 +67,9 @@
         font-size: 1.5rem;
         display: block;
         margin-bottom: 10px;
+        @media screen and (max-width: 400px) {
+          font-size: 1.2rem;
+        }
       }
     }
     .details-vote {
@@ -107,6 +110,9 @@
       color: var(--color-gray);
       font-weight: bold;
       font-size: 1.5rem;
+      @media screen and (max-width: 400px) {
+        font-size: 1.2rem;
+      }
       ul {
         list-style: none;
         padding: 0;
@@ -124,6 +130,10 @@
           -moz-border-radius: 5px;
           -ms-border-radius: 5px;
           -o-border-radius: 5px;
+          @media screen and (max-width: 400px) {
+            font-size: 0.7rem;
+            padding: 2px 5px;
+          }
         }
       }
     }
