@@ -74,7 +74,12 @@
       }
     }
   }
-  .user-img img {
-    height: 50px;
+  .user-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 50px;
+    }
   }
 }
