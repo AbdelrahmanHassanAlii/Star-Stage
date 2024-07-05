@@ -35,4 +35,5 @@
 .episode-content {
   padding: 5px;
   text-align: center;
+  color: var(--color-light-blue);
 }
